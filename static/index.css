@@ -1,0 +1,46 @@
+body {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header { text-align: center; color: white; margin-bottom: 30px; }
+    .header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    .survey-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+    .question-group { margin-bottom: 30px; }
+    .question-title {
+      font-size: 1.2rem; font-weight: 600;
+      color: #2c3e50; margin-bottom: 10px;
+      border-left: 4px solid #3498db;
+      padding-left: 12px;
+    }
+    .radio-group { display: flex; flex-direction: column; gap: 10px; }
+    .radio-option {
+      display: flex; align-items: center;
+      padding: 10px 15px; border: 2px solid #e0e0e0;
+      border-radius: 10px; cursor: pointer;
+      transition: all 0.3s ease; background: #fafafa;
+    }
+    .radio-option:hover { border-color: #3498db; background: #f0f8ff; }
+    .radio-option input[type="radio"] { margin-right: 10px; transform: scale(1.2); accent-color: #3498db; }
+    .submit-section { text-align: center; margin-top: 30px; }
+    .submit-btn {
+      background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+      color: white; border: none; padding: 12px 35px;
+      font-size: 1.1rem; font-weight: 600; border-radius: 50px;
+      cursor: pointer; transition: all 0.3s ease;
+    }
+    .submit-btn:hover { transform: translateY(-3px); }

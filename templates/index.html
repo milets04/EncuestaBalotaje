@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Balotaje2025</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🗳️ Encuesta Electoral Bolivia 2025</h1>
+      <p>Tu opinión es importante para la democracia</p>
+    </div>
+
+    <div class="survey-card">
+      <form id="surveyForm">
+        
+        <!-- 1. Datos demográficos -->
+        <div class="question-group">
+          <div class="question-title">1. Edad</div>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="edad" value="18-24">18-24</label>
+            <label class="radio-option"><input type="radio" name="edad" value="25-30">25-30</label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question-title">2. Género</div>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="genero" value="Masculino">Masculino</label>
+            <label class="radio-option"><input type="radio" name="genero" value="Femenino">Femenino</label>
+            <label class="radio-option"><input type="radio" name="genero" value="No binario">No Binario</label>
+            <label class="radio-option"><input type="radio" name="genero" value="Prefiero no decir">Prefiero no decir</label>
+          </div>
+        </div>
+
+        <!-- 2. Intención de voto -->
+        <div class="question-group">
+          <div class="question-title">3. Si las elecciones fueran mañana, ¿por qué candidato votaría?</div>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="voto" value="Rodrigo Paz (Izquierda)">Rodrigo Paz Pereira (Izquierda)</label>
+            <label class="radio-option"><input type="radio" name="voto" value="Jorge Quiroga (Derecha)">Jorge Quiroga Ramírez (Derecha)</label>
+            <label class="radio-option"><input type="radio" name="voto" value="Blanco">Voto Blanco</label>
+            <label class="radio-option"><input type="radio" name="voto" value="Nulo">Voto Nulo</label>
+            <label class="radio-option"><input type="radio" name="voto" value="Indeciso">Aún no lo decido</label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question-title">4. ¿Qué tan seguro está de su elección? (1 nada seguro – 5 completamente seguro)</div>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="seguridad" value="1">1</label>
+            <label class="radio-option"><input type="radio" name="seguridad" value="2">2</label>
+            <label class="radio-option"><input type="radio" name="seguridad" value="3">3</label>
+            <label class="radio-option"><input type="radio" name="seguridad" value="4">4</label>
+            <label class="radio-option"><input type="radio" name="seguridad" value="5">5</label>
+          </div>
+        </div>
+
+        <!-- 3. Factores de decisión -->
+        <div class="question-group">
+          <div class="question-title">5. Factores que influyen en tu decisión (1 = Nada importante, 5 = Muy importante)</div>
+          <p>Economía</p>
+          <div class="radio-group">
+            <label><input type="radio" name="economia" value="1">1</label>
+            <label><input type="radio" name="economia" value="2">2</label>
+            <label><input type="radio" name="economia" value="3">3</label>
+            <label><input type="radio" name="economia" value="4">4</label>
+            <label><input type="radio" name="economia" value="5">5</label>
+          </div>
+        </div>
+
+        <!-- 4. Percepción de candidatos -->
+        <div class="question-group">
+          <div class="question-title">6. Honestidad/Transparencia</div>
+          <p>¿En qué medida describe este atributo a cada candidato?</p>
+          <div>
+            <strong>Rodrigo Paz (Izquierda)</strong><br>
+            <label><input type="radio" name="honestidad_paz" value="1">1</label>
+            <label><input type="radio" name="honestidad_paz" value="2">2</label>
+            <label><input type="radio" name="honestidad_paz" value="3">3</label>
+            <label><input type="radio" name="honestidad_paz" value="4">4</label>
+            <label><input type="radio" name="honestidad_paz" value="5">5</label>
+          </div>
+          <div>
+            <strong>Jorge Quiroga (Derecha)</strong><br>
+            <label><input type="radio" name="honestidad_quiroga" value="1">1</label>
+            <label><input type="radio" name="honestidad_quiroga" value="2">2</label>
+            <label><input type="radio" name="honestidad_quiroga" value="3">3</label>
+            <label><input type="radio" name="honestidad_quiroga" value="4">4</label>
+            <label><input type="radio" name="honestidad_quiroga" value="5">5</label>
+          </div>
+        </div>
+
+        <div class="submit-section">
+          <button type="submit" class="submit-btn">Enviar Encuesta</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('surveyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("¡Gracias por participar! Tus respuestas fueron registradas.");
+    });
+  </script>
+</body>
+</html>
