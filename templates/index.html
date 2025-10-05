@@ -9,12 +9,12 @@
   <div class="container">
     <div class="header">
       <h1>🗳️ Encuesta Electoral Bolivia 2025</h1>
-      <p>Tu opinión es importante para la democracia</p>
+      <p>Jóvenes Universitarios Bolivianos y Tendencia de Voto.</p>
     </div>
 
     <div class="survey-card">
       <form id="surveyForm">
-        
+
         <!-- 1. Datos demográficos -->
         <div class="question-group">
           <div class="question-title">1. Edad</div>
@@ -31,6 +31,102 @@
             <label class="radio-option"><input type="radio" name="genero" value="Femenino">Femenino</label>
             <label class="radio-option"><input type="radio" name="genero" value="No binario">No Binario</label>
             <label class="radio-option"><input type="radio" name="genero" value="Prefiero no decir">Prefiero no decir</label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question-title">3. Ciudad/Departamento de Residencia</div>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="ciudad" value="Cochabamba">Cochabamba</label>
+            <label class="radio-option"><input type="radio" name="ciudad" value="La Paz">La Paz</label>
+            <label class="radio-option"><input type="radio" name="ciudad" value="Santa Cruz">Santa Cruz</label>
+            <label class="radio-option"><input type="radio" name="ciudad" value="Pando">Pando</label>
+            <label class="radio-option"><input type="radio" name="ciudad" value="Beni">Beni</label>
+            <label class="radio-option"><input type="radio" name="ciudad" value="Potosí">Potosí</label>
+            <label class="radio-option"><input type="radio" name="ciudad" value="Oruro">Oruro</label>
+            <label class="radio-option"><input type="radio" name="ciudad" value="Chuquisaca">Chuquisaca</label>
+            <label class="radio-option"><input type="radio" name="ciudad" value="Tarija">Tarija</label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question-title">4. Localidad/Provincia de origen:</div>
+          <div class="select-group">
+            <label for="localidad" style="font-weight:500; color:#2c3e50;">Selecciona tu localidad o provincia:</label>
+            <select id="localidad" name="localidad">
+              <option value="">Seleccionar...</option>
+              <option value="Cliza">Cliza</option>
+              <option value="Punata">Punata</option>
+              <option value="Chapare">Chapare</option>
+              <option value="Cercado">Cercado</option>
+              <option value="Capinota">Capinota</option>
+              <option value="Mizque">Mizque</option>
+              <option value="Quillacollo">Quillacollo</option>
+              <option value="Arque">Arque</option>
+              <option value="Otra">Otra</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question-title">5. Situación Educativa</div>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="situacion" value="Estudiante" id="optEstudiante">
+              Estudiante Universitario
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="situacion" value="Profesional" id="optProfesional">
+              Recién Profesionalizado
+            </label>
+          </div>
+
+          <div id="estudianteCampos" class="hidden-field">
+            <div class="select-group">
+              <label for="carrera_est">Carrera universitaria:</label>
+              <input type="text" id="carrera_est" name="carrera_est" placeholder="Ej. Ingeniería Industrial">
+            </div>
+          </div>
+
+          <div id="profesionalCampos" class="hidden-field">
+            <div class="select-group">
+              <label for="area_prof">Área profesional:</label>
+              <select id="area_prof" name="area_prof">
+                <option value="">Seleccionar...</option>
+                <option value="Ingeniería">Ingeniería</option>
+                <option value="Ciencias Sociales">Ciencias Sociales</option>
+                <option value="Salud">Salud</option>
+                <option value="Educación">Educación</option>
+                <option value="Económicas/Empresariales">Económicas y Empresariales</option>
+                <option value="Derecho/Política">Derecho y Ciencias Políticas</option>
+                <option value="Artes/Diseño">Artes y Diseño</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="select-group">
+              <label for="carrera_prof">Carrera específica:</label>
+              <input type="text" id="carrera_prof" name="carrera_prof" placeholder="Ej. Administración de Empresas">
+            </div>
+          </div>
+        </div>
+        
+        <div class="question-group">
+          <div class="question-title">6. Estrato Socioeconómico Percibido</div>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="estrato" value="Bajo">Bajo (Luchando para cubrir necesidades básicas)</label>
+            <label class="radio-option"><input type="radio" name="estrato" value="Medio-Bajo">Medio-Bajo (Cubriendo necesidades, pocos ahorros)</label>
+            <label class="radio-option"><input type="radio" name="estrato" value="Medio">Medio (Vida cómoda, capacidad de ahorro)</label>
+            <label class="radio-option"><input type="radio" name="estrato" value="Medio-Alto">Medio-Alto (Ingresos significativos, estabilidad)</label>
+          </div>
+        </div>
+        <div class="question-group">
+          <div class="question-title">7. Estatus Laboral</div>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="estatus" value="Publica">Empleado Institución Pública</label>
+            <label class="radio-option"><input type="radio" name="estatus" value="Privada">Empleado Empresa Privada</label>
+            <label class="radio-option"><input type="radio" name="estatus" value="Desempleado">Desempleado</label>
+            <label class="radio-option"><input type="radio" name="estatus" value="Freelance">Freelance</label>
+            <label class="radio-option"><input type="radio" name="estatus" value="Innovador">Innovador</label>
           </div>
         </div>
 
