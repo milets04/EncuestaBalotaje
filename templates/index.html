@@ -201,6 +201,20 @@
       e.preventDefault();
       alert("¡Gracias por participar! Tus respuestas fueron registradas.");
     });
+      const optEst = document.getElementById('optEstudiante');
+      const optProf = document.getElementById('optProfesional');
+      const camposEst = document.getElementById('estudianteCampos');
+      const camposProf = document.getElementById('profesionalCampos');
+
+      optEst.addEventListener('change', () => {
+        camposEst.style.display = 'block';
+        camposProf.style.display = 'none';
+      });
+
+      optProf.addEventListener('change', () => {
+        camposProf.style.display = 'block';
+        camposEst.style.display = 'none';
+      });
   </script>
 </body>
 </html>
