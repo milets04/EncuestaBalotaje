@@ -21,6 +21,7 @@
           <div class="radio-group">
             <label class="radio-option"><input type="radio" name="edad" value="18-24">18-24</label>
             <label class="radio-option"><input type="radio" name="edad" value="25-30">25-30</label>
+            <label class="radio-option"><input type="radio" name="edad" value="31-40">31-40</label>
           </div>
         </div>
 
@@ -80,14 +81,36 @@
               Recién Profesionalizado
             </label>
           </div>
-
+          <!-- Campos para Estudiante -->
           <div id="estudianteCampos" class="hidden-field">
             <div class="select-group">
               <label for="carrera_est">Carrera universitaria:</label>
-              <input type="text" id="carrera_est" name="carrera_est" placeholder="Ej. Ingeniería Industrial">
+              <select id="carrera_est" name="carrera_est">
+                <option value="">Seleccionar...</option>
+                <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                <option value="Ingeniería Civil">Ingeniería Civil</option>
+                <option value="Ingeniería Comercial">Ingeniería Comercial</option>
+                <option value="Administración de Empresas">Administración de Empresas</option>
+                <option value="Derecho">Derecho</option>
+                <option value="Medicina">Medicina</option>
+                <option value="Psicología">Psicología</option>
+                <option value="Comunicación Social">Comunicación Social</option>
+                <option value="Contaduría Pública">Contaduría Pública</option>
+                <option value="Arquitectura">Arquitectura</option>
+                <option value="Educación">Educación</option>
+                <option value="Economía">Economía</option>
+                <option value="Diseño Gráfico">Diseño Gráfico</option>
+                <option value="Otro">Otra carrera</option>
+              </select>
+            </div>
+            <div class="select-group" id="otraCarreraEst" style="display:none;">
+              <label for="otra_carrera_est">Especifica tu carrera:</label>
+              <input type="text" id="otra_carrera_est" name="otra_carrera_est" placeholder="Escribe tu carrera...">
             </div>
           </div>
 
+          <!-- Campos para Profesional -->
           <div id="profesionalCampos" class="hidden-field">
             <div class="select-group">
               <label for="area_prof">Área profesional:</label>
@@ -105,7 +128,23 @@
             </div>
             <div class="select-group">
               <label for="carrera_prof">Carrera específica:</label>
-              <input type="text" id="carrera_prof" name="carrera_prof" placeholder="Ej. Administración de Empresas">
+              <select id="carrera_prof" name="carrera_prof">
+                <option value="">Seleccionar...</option>
+                <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                <option value="Ingeniería Civil">Ingeniería Civil</option>
+                <option value="Ingeniería Comercial">Ingeniería Comercial</option>
+                <option value="Administración de Empresas">Administración de Empresas</option>
+                <option value="Derecho">Derecho</option>
+                <option value="Medicina">Medicina</option>
+                <option value="Psicología">Psicología</option>
+                <option value="Comunicación Social">Comunicación Social</option>
+                <option value="Contaduría Pública">Contaduría Pública</option>
+                <option value="Arquitectura">Arquitectura</option>
+                <option value="Economía">Economía</option>
+                <option value="Diseño Gráfico">Diseño Gráfico</option>
+                <option value="Otro">Otra carrera</option>
+              </select>
             </div>
           </div>
         </div>
@@ -132,7 +171,7 @@
 
         <!-- 2. Intención de voto -->
         <div class="question-group">
-          <div class="question-title">3. Si las elecciones fueran mañana, ¿por qué candidato votaría?</div>
+          <div class="question-title">8. Si las elecciones fueran mañana, ¿por qué candidato votaría?</div>
           <div class="radio-group">
             <label class="radio-option"><input type="radio" name="voto" value="Rodrigo Paz (Izquierda)">Rodrigo Paz Pereira (Izquierda)</label>
             <label class="radio-option"><input type="radio" name="voto" value="Jorge Quiroga (Derecha)">Jorge Quiroga Ramírez (Derecha)</label>
@@ -143,51 +182,456 @@
         </div>
 
         <div class="question-group">
-          <div class="question-title">4. ¿Qué tan seguro está de su elección? (1 nada seguro – 5 completamente seguro)</div>
+          <div class="question-title">9. ¿Qué tan seguro está de su elección? (1 nada seguro - 5 completamente seguro)</div>
+            <label><input type="radio" name="seguridad" value="1">1</label>
+            <label><input type="radio" name="seguridad" value="2">2</label>
+            <label><input type="radio" name="seguridad" value="3">3</label>
+            <label><input type="radio" name="seguridad" value="4">4</label>
+            <label><input type="radio" name="seguridad" value="5">5</label>
+        </div>
+
+        <div class="question-group">
+          <div class="question-title">10. ¿Con qué tendencia política se identifica más personalmente?</div>
           <div class="radio-group">
-            <label class="radio-option"><input type="radio" name="seguridad" value="1">1</label>
-            <label class="radio-option"><input type="radio" name="seguridad" value="2">2</label>
-            <label class="radio-option"><input type="radio" name="seguridad" value="3">3</label>
-            <label class="radio-option"><input type="radio" name="seguridad" value="4">4</label>
-            <label class="radio-option"><input type="radio" name="seguridad" value="5">5</label>
+            <label class="radio-option"><input type="radio" name="tendencia" value="IzquierdaProgresista">Izquierda/Progresista</label>
+            <label class="radio-option"><input type="radio" name="tendencia" value="CentroIzq">Centro-Izquierda</label>
+            <label class="radio-option"><input type="radio" name="tendencia" value="Centro">Centro</label>
+            <label class="radio-option"><input type="radio" name="tendencia" value="CentroDer">Centro-Derecha</label>
+            <label class="radio-option"><input type="radio" name="tendencia" value="Derecha">Derecha Conservadora</label>
           </div>
         </div>
 
         <!-- 3. Factores de decisión -->
         <div class="question-group">
-          <div class="question-title">5. Factores que influyen en tu decisión (1 = Nada importante, 5 = Muy importante)</div>
-          <p>Economía</p>
-          <div class="radio-group">
-            <label><input type="radio" name="economia" value="1">1</label>
-            <label><input type="radio" name="economia" value="2">2</label>
-            <label><input type="radio" name="economia" value="3">3</label>
-            <label><input type="radio" name="economia" value="4">4</label>
-            <label><input type="radio" name="economia" value="5">5</label>
-          </div>
+        <div class="question-title">
+          11. Factores que influyen en tu decisión (1 = Nada importante, 5 = Muy importante)
         </div>
 
+        <div class="factors-grid">
+          <div class="factor">
+            <p>Estabilidad</p>
+            <div class="scale-options">
+              <label><input type="radio" name="estabilidad" value="1">1</label>
+              <label><input type="radio" name="estabilidad" value="2">2</label>
+              <label><input type="radio" name="estabilidad" value="3">3</label>
+              <label><input type="radio" name="estabilidad" value="4">4</label>
+              <label><input type="radio" name="estabilidad" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Empleo</p>
+            <div class="scale-options">
+              <label><input type="radio" name="empleo" value="1">1</label>
+              <label><input type="radio" name="empleo" value="2">2</label>
+              <label><input type="radio" name="empleo" value="3">3</label>
+              <label><input type="radio" name="empleo" value="4">4</label>
+              <label><input type="radio" name="empleo" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Deuda</p>
+            <div class="scale-options">
+              <label><input type="radio" name="deuda" value="1">1</label>
+              <label><input type="radio" name="deuda" value="2">2</label>
+              <label><input type="radio" name="deuda" value="3">3</label>
+              <label><input type="radio" name="deuda" value="4">4</label>
+              <label><input type="radio" name="deuda" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Calidad Universitaria</p>
+            <div class="scale-options">
+              <label><input type="radio" name="calidad" value="1">1</label>
+              <label><input type="radio" name="calidad" value="2">2</label>
+              <label><input type="radio" name="calidad" value="3">3</label>
+              <label><input type="radio" name="calidad" value="4">4</label>
+              <label><input type="radio" name="calidad" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Acceso a becas</p>
+            <div class="scale-options">
+              <label><input type="radio" name="becas" value="1">1</label>
+              <label><input type="radio" name="becas" value="2">2</label>
+              <label><input type="radio" name="becas" value="3">3</label>
+              <label><input type="radio" name="becas" value="4">4</label>
+              <label><input type="radio" name="becas" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Lucha contra la corrupción y justicia</p>
+            <div class="scale-options">
+              <label><input type="radio" name="lucha" value="1">1</label>
+              <label><input type="radio" name="lucha" value="2">2</label>
+              <label><input type="radio" name="lucha" value="3">3</label>
+              <label><input type="radio" name="lucha" value="4">4</label>
+              <label><input type="radio" name="lucha" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Salud pública</p>
+            <div class="scale-options">
+              <label><input type="radio" name="salud" value="1">1</label>
+              <label><input type="radio" name="salud" value="2">2</label>
+              <label><input type="radio" name="salud" value="3">3</label>
+              <label><input type="radio" name="salud" value="4">4</label>
+              <label><input type="radio" name="salud" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Seguridad Ciudadana</p>
+            <div class="scale-options">
+              <label><input type="radio" name="seguCiu" value="1">1</label>
+              <label><input type="radio" name="seguCiu" value="2">2</label>
+              <label><input type="radio" name="seguCiu" value="3">3</label>
+              <label><input type="radio" name="seguCiu" value="4">4</label>
+              <label><input type="radio" name="seguCiu" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Cambio climático y medio ambiente</p>
+            <div class="scale-options">
+              <label><input type="radio" name="climatico" value="1">1</label>
+              <label><input type="radio" name="climatico" value="2">2</label>
+              <label><input type="radio" name="climatico" value="3">3</label>
+              <label><input type="radio" name="climatico" value="4">4</label>
+              <label><input type="radio" name="climatico" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Derechos sociales sobre temas de género</p>
+            <div class="scale-options">
+              <label><input type="radio" name="temasGenero" value="1">1</label>
+              <label><input type="radio" name="temasGenero" value="2">2</label>
+              <label><input type="radio" name="temasGenero" value="3">3</label>
+              <label><input type="radio" name="temasGenero" value="4">4</label>
+              <label><input type="radio" name="temasGenero" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Derechos sociales sobre indígenas</p>
+            <div class="scale-options">
+              <label><input type="radio" name="indigenas" value="1">1</label>
+              <label><input type="radio" name="indigenas" value="2">2</label>
+              <label><input type="radio" name="indigenas" value="3">3</label>
+              <label><input type="radio" name="indigenas" value="4">4</label>
+              <label><input type="radio" name="indigenas" value="5">5</label>
+            </div>
+          </div>
+
+          <div class="factor">
+            <p>Modelo de desarrollo del país (Estatismo vs Mercado)</p>
+            <div class="scale-options">
+              <label><input type="radio" name="desarrollo" value="1">1</label>
+              <label><input type="radio" name="desarrollo" value="2">2</label>
+              <label><input type="radio" name="desarrollo" value="3">3</label>
+              <label><input type="radio" name="desarrollo" value="4">4</label>
+              <label><input type="radio" name="desarrollo" value="5">5</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        
         <!-- 4. Percepción de candidatos -->
         <div class="question-group">
-          <div class="question-title">6. Honestidad/Transparencia</div>
-          <p>¿En qué medida describe este atributo a cada candidato?</p>
-          <div>
-            <strong>Rodrigo Paz (Izquierda)</strong><br>
-            <label><input type="radio" name="honestidad_paz" value="1">1</label>
-            <label><input type="radio" name="honestidad_paz" value="2">2</label>
-            <label><input type="radio" name="honestidad_paz" value="3">3</label>
-            <label><input type="radio" name="honestidad_paz" value="4">4</label>
-            <label><input type="radio" name="honestidad_paz" value="5">5</label>
-          </div>
-          <div>
-            <strong>Jorge Quiroga (Derecha)</strong><br>
-            <label><input type="radio" name="honestidad_quiroga" value="1">1</label>
-            <label><input type="radio" name="honestidad_quiroga" value="2">2</label>
-            <label><input type="radio" name="honestidad_quiroga" value="3">3</label>
-            <label><input type="radio" name="honestidad_quiroga" value="4">4</label>
-            <label><input type="radio" name="honestidad_quiroga" value="5">5</label>
+          <div class="question-title">12. ¿En qué medida describe este atributo a cada candidato?</div>
+          <div class="attributes-grid">
+            <div class="attribute">
+              <p>Honestidad / Transparencia</p>
+              <div class="candidates-grid">
+                <div class="candidate-box">
+                  <strong>Rodrigo Paz (Izquierda)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="honestidad_paz" value="1">1</label>
+                    <label><input type="radio" name="honestidad_paz" value="2">2</label>
+                    <label><input type="radio" name="honestidad_paz" value="3">3</label>
+                    <label><input type="radio" name="honestidad_paz" value="4">4</label>
+                    <label><input type="radio" name="honestidad_paz" value="5">5</label>
+                  </div>
+                </div>
+
+                <div class="candidate-box">
+                  <strong>Jorge Quiroga (Derecha)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="honestidad_quiroga" value="1">1</label>
+                    <label><input type="radio" name="honestidad_quiroga" value="2">2</label>
+                    <label><input type="radio" name="honestidad_quiroga" value="3">3</label>
+                    <label><input type="radio" name="honestidad_quiroga" value="4">4</label>
+                    <label><input type="radio" name="honestidad_quiroga" value="5">5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="attribute">
+              <p>Experiencia en gestión</p>
+              <div class="candidates-grid">
+                <div class="candidate-box">
+                  <strong>Rodrigo Paz (Izquierda)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="gestion_paz" value="1">1</label>
+                    <label><input type="radio" name="gestion_paz" value="2">2</label>
+                    <label><input type="radio" name="gestion_paz" value="3">3</label>
+                    <label><input type="radio" name="gestion_paz" value="4">4</label>
+                    <label><input type="radio" name="gestion_paz" value="5">5</label>
+                  </div>
+                </div>
+
+                <div class="candidate-box">
+                  <strong>Jorge Quiroga (Derecha)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="gestion_quiroga" value="1">1</label>
+                    <label><input type="radio" name="gestion_quiroga" value="2">2</label>
+                    <label><input type="radio" name="gestion_quiroga" value="3">3</label>
+                    <label><input type="radio" name="gestion_quiroga" value="4">4</label>
+                    <label><input type="radio" name="gestion_quiroga" value="5">5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="attribute">
+              <p>Capacidad de unir a la población</p>
+              <div class="candidates-grid">
+                <div class="candidate-box">
+                  <strong>Rodrigo Paz (Izquierda)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="capacidad_paz" value="1">1</label>
+                    <label><input type="radio" name="capacidad_paz" value="2">2</label>
+                    <label><input type="radio" name="capacidad_paz" value="3">3</label>
+                    <label><input type="radio" name="capacidad_paz" value="4">4</label>
+                    <label><input type="radio" name="capacidad_paz" value="5">5</label>
+                  </div>
+                </div>
+
+                <div class="candidate-box">
+                  <strong>Jorge Quiroga (Derecha)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="capacidad_quiroga" value="1">1</label>
+                    <label><input type="radio" name="capacidad_quiroga" value="2">2</label>
+                    <label><input type="radio" name="capacidad_quiroga" value="3">3</label>
+                    <label><input type="radio" name="capacidad_quiroga" value="4">4</label>
+                    <label><input type="radio" name="capacidad_quiroga" value="5">5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="attribute">
+              <p>Conexión con los jovenes</p>
+              <div class="candidates-grid">
+                <div class="candidate-box">
+                  <strong>Rodrigo Paz (Izquierda)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="conexion_paz" value="1">1</label>
+                    <label><input type="radio" name="conexion_paz" value="2">2</label>
+                    <label><input type="radio" name="conexion_paz" value="3">3</label>
+                    <label><input type="radio" name="conexion_paz" value="4">4</label>
+                    <label><input type="radio" name="conexion_paz" value="5">5</label>
+                  </div>
+                </div>
+
+                <div class="candidate-box">
+                  <strong>Jorge Quiroga (Derecha)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="conexion_quiroga" value="1">1</label>
+                    <label><input type="radio" name="conexion_quiroga" value="2">2</label>
+                    <label><input type="radio" name="conexion_quiroga" value="3">3</label>
+                    <label><input type="radio" name="conexion_quiroga" value="4">4</label>
+                    <label><input type="radio" name="conexion_quiroga" value="5">5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="attribute">
+              <p>Liderazgo fuerte/decisivo</p>
+              <div class="candidates-grid">
+                <div class="candidate-box">
+                  <strong>Rodrigo Paz (Izquierda)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="liderazgo_paz" value="1">1</label>
+                    <label><input type="radio" name="liderazgo_paz" value="2">2</label>
+                    <label><input type="radio" name="liderazgo_paz" value="3">3</label>
+                    <label><input type="radio" name="liderazgo_paz" value="4">4</label>
+                    <label><input type="radio" name="liderazgo_paz" value="5">5</label>
+                  </div>
+                </div>
+
+                <div class="candidate-box">
+                  <strong>Jorge Quiroga (Derecha)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="liderazgo_quiroga" value="1">1</label>
+                    <label><input type="radio" name="liderazgo_quiroga" value="2">2</label>
+                    <label><input type="radio" name="liderazgo_quiroga" value="3">3</label>
+                    <label><input type="radio" name="liderazgo_quiroga" value="4">4</label>
+                    <label><input type="radio" name="liderazgo_quiroga" value="5">5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="attribute">
+              <p>Propuestas claras y realistas</p>
+              <div class="candidates-grid">
+                <div class="candidate-box">
+                  <strong>Rodrigo Paz (Izquierda)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="propuestas_paz" value="1">1</label>
+                    <label><input type="radio" name="propuestas_paz" value="2">2</label>
+                    <label><input type="radio" name="propuestas_paz" value="3">3</label>
+                    <label><input type="radio" name="propuestas_paz" value="4">4</label>
+                    <label><input type="radio" name="propuestas_paz" value="5">5</label>
+                  </div>
+                </div>
+
+                <div class="candidate-box">
+                  <strong>Jorge Quiroga (Derecha)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="propuestas_quiroga" value="1">1</label>
+                    <label><input type="radio" name="propuestas_quiroga" value="2">2</label>
+                    <label><input type="radio" name="propuestas_quiroga" value="3">3</label>
+                    <label><input type="radio" name="propuestas_quiroga" value="4">4</label>
+                    <label><input type="radio" name="propuestas_quiroga" value="5">5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="attribute">
+              <p>Capacidad de diálogo y negociación</p>
+              <div class="candidates-grid">
+                <div class="candidate-box">
+                  <strong>Rodrigo Paz (Izquierda)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="capacidadDialogo_paz" value="1">1</label>
+                    <label><input type="radio" name="capacidadDialogo_paz" value="2">2</label>
+                    <label><input type="radio" name="capacidadDialogo_paz" value="3">3</label>
+                    <label><input type="radio" name="capacidadDialogo_paz" value="4">4</label>
+                    <label><input type="radio" name="capacidadDialogo_paz" value="5">5</label>
+                  </div>
+                </div>
+
+                <div class="candidate-box">
+                  <strong>Jorge Quiroga (Derecha)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="capacidadDialogo_quiroga" value="1">1</label>
+                    <label><input type="radio" name="capacidadDialogo_quiroga" value="2">2</label>
+                    <label><input type="radio" name="capacidadDialogo_quiroga" value="3">3</label>
+                    <label><input type="radio" name="capacidadDialogo_quiroga" value="4">4</label>
+                    <label><input type="radio" name="capacidadDialogo_quiroga" value="5">5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="attribute">
+              <p>Compromiso con los derechos humanos</p>
+              <div class="candidates-grid">
+                <div class="candidate-box">
+                  <strong>Rodrigo Paz (Izquierda)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="derechos_paz" value="1">1</label>
+                    <label><input type="radio" name="derechos_paz" value="2">2</label>
+                    <label><input type="radio" name="derechos_paz" value="3">3</label>
+                    <label><input type="radio" name="derechos_paz" value="4">4</label>
+                    <label><input type="radio" name="derechos_paz" value="5">5</label>
+                  </div>
+                </div>
+
+                <div class="candidate-box">
+                  <strong>Jorge Quiroga (Derecha)</strong>
+                  <div class="scale-options">
+                    <label><input type="radio" name="derechos_quiroga" value="1">1</label>
+                    <label><input type="radio" name="derechos_quiroga" value="2">2</label>
+                    <label><input type="radio" name="derechos_quiroga" value="3">3</label>
+                    <label><input type="radio" name="derechos_quiroga" value="4">4</label>
+                    <label><input type="radio" name="derechos_quiroga" value="5">5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <div class="question-group">
+          <div class="question-title">13. ¿Cuál es el principal medio por el que recibe información política? </div>
+          <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="medio_principal" value="Redes Sociales" id="optRedes">
+            Redes Sociales
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="medio_principal" value="Medios Comunicacionales" id="optComunicacion">
+            Medios Comunicacionales
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="medio_principal" value="Medios Digitales" id="optDigital">
+            Medios Digitales
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="medio_principal" value="Vinculos Sociales" id="optVinculos">
+            Vínculos Sociales
+          </label>
+        </div>
+
+        <!-- Subopciones dinámicas -->
+        <div id="redesSelect" class="hidden-field">
+          <div class="select-group">
+            <label for="medio_redes">Selecciona la red social:</label>
+            <select id="medio_redes" name="medio_redes">
+              <option value="">Seleccionar...</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Linkedin">Linkedin</option>
+              <option value="Telegram">Telegram</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="comunicacionSelect" class="hidden-field">
+          <div class="select-group">
+            <label for="medio_comunicacion">Selecciona el medio comunicacional:</label>
+            <select id="medio_comunicacion" name="medio_comunicacion">
+              <option value="">Seleccionar...</option>
+              <option value="Television">Televisión tradicional</option>
+              <option value="Radio">Radio tradicional</option>
+              <option value="Periodicos">Periódicos</option>
+              <option value="Revistas">Revistas</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="digitalSelect" class="hidden-field">
+          <div class="select-group">
+            <label for="medio_digital">Selecciona el medio digital:</label>
+            <select id="medio_digital" name="medio_digital">
+              <option value="">Seleccionar...</option>
+              <option value="Prensa en linea">Prensa en línea</option>
+              <option value="Podcast">Podcast</option>
+              <option value="SitiosWeb">Sitios web</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="vinculosSelect" class="hidden-field">
+          <div class="select-group">
+            <label for="medio_vinculos">Selecciona el vínculo social:</label>
+            <select id="medio_vinculos" name="medio_vinculos">
+              <option value="">Seleccionar...</option>
+              <option value="Familiares">Familiares</option>
+              <option value="Amigos">Amigos</option>
+              <option value="Pareja">Pareja</option>
+              <option value="Trabajo">Trabajo</option>
+            </select>
+          </div>
+        </div>
+        </div>
         <div class="submit-section">
           <button type="submit" class="submit-btn">Enviar Encuesta</button>
         </div>
@@ -215,6 +659,28 @@
         camposProf.style.display = 'block';
         camposEst.style.display = 'none';
       });
+
+      const optRedes = document.getElementById('optRedes');
+      const optComunicacion = document.getElementById('optComunicacion');
+      const optDigital = document.getElementById('optDigital');
+      const optVinculos = document.getElementById('optVinculos');
+
+      const redesSel = document.getElementById('redesSelect');
+      const comunicacionSel = document.getElementById('comunicacionSelect');
+      const digitalSel = document.getElementById('digitalSelect');
+      const vinculosSel = document.getElementById('vinculosSelect');
+
+      const allSelects = [redesSel, comunicacionSel, digitalSel, vinculosSel];
+
+      function mostrarSelect(selectMostrar) {
+        allSelects.forEach(sel => sel.style.display = 'none');
+        if (selectMostrar) selectMostrar.style.display = 'block';
+      }
+
+      optRedes.addEventListener('change', () => mostrarSelect(redesSel));
+      optComunicacion.addEventListener('change', () => mostrarSelect(comunicacionSel));
+      optDigital.addEventListener('change', () => mostrarSelect(digitalSel));
+      optVinculos.addEventListener('change', () => mostrarSelect(vinculosSel));
   </script>
 </body>
 </html>

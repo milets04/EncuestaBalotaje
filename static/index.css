@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #a447c9 0%, #a447c9 100%);
+  background: linear-gradient(135deg, #76d3da 0%, #76d3da 100%);
   min-height: 100vh;
 }
 .container {
@@ -70,3 +70,126 @@ body {
   border-radius: 10px;
   border: 1px solid #ddd;
 }
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.factor {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.factor:hover {
+  background: #eef6ff;
+  border-color: #3498db;
+}
+
+.factor p {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.scale-options {
+  display: flex;
+  gap: 10px;
+}
+
+.scale-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.scale-options label:hover {
+  background: #eaf3ff;
+  border-color: #3498db;
+}
+
+.scale-options input[type="radio"] {
+  transform: scale(1.2);
+  accent-color: #3498db;
+}
+.attributes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.attribute {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.attribute p {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.candidate-box {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  transition: all 0.2s ease;
+}
+
+.candidate-box:hover {
+  border-color: #3498db;
+  background: #eef6ff;
+}
+
+.candidate-box strong {
+  display: block;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.scale-options {
+  display: flex;
+  gap: 10px;
+}
+
+.scale-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #fdfdfd;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.scale-options label:hover {
+  background: #eaf3ff;
+  border-color: #3498db;
+}
+
+.scale-options input[type="radio"] {
+  transform: scale(1.2);
+  accent-color: #3498db;
+}
+
