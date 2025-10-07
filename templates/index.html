@@ -80,6 +80,10 @@
               <input type="radio" name="situacion" value="Profesional" id="optProfesional">
               Recién Profesionalizado
             </label>
+            <label class="radio-option">
+              <input type="radio" name="situacion" value="noEstudiante" id="noEstudiante">
+              Sin estudios superiores
+            </label>
           </div>
           <!-- Campos para Estudiante -->
           <div id="estudianteCampos" class="hidden-field">
@@ -166,6 +170,7 @@
             <label class="radio-option"><input type="radio" name="estatus" value="Desempleado">Desempleado</label>
             <label class="radio-option"><input type="radio" name="estatus" value="Freelance">Freelance</label>
             <label class="radio-option"><input type="radio" name="estatus" value="Innovador">Innovador</label>
+            <label class="radio-option"><input type="radio" name="estatus" value="pasante">Pasante</label>
           </div>
         </div>
 
@@ -337,6 +342,26 @@
               <label><input type="radio" name="desarrollo" value="3">3</label>
               <label><input type="radio" name="desarrollo" value="4">4</label>
               <label><input type="radio" name="desarrollo" value="5">5</label>
+            </div>
+          </div>
+          <div class="factor">
+            <p>Relaciones internacionales y política exterior</p>
+            <div class="scale-options">
+              <label><input type="radio" name="relaciones" value="1">1</label>
+              <label><input type="radio" name="relaciones" value="2">2</label>
+              <label><input type="radio" name="relaciones" value="3">3</label>
+              <label><input type="radio" name="relaciones" value="4">4</label>
+              <label><input type="radio" name="relaciones" value="5">5</label>
+            </div>
+          </div>
+          <div class="factor">
+            <p>Protección de la libertad de expresión y prensa</p>
+            <div class="scale-options">
+              <label><input type="radio" name="expresion" value="1">1</label>
+              <label><input type="radio" name="expresion" value="2">2</label>
+              <label><input type="radio" name="expresion" value="3">3</label>
+              <label><input type="radio" name="expresion" value="4">4</label>
+              <label><input type="radio" name="expresion" value="5">5</label>
             </div>
           </div>
         </div>
@@ -557,84 +582,133 @@
             </div>
           </div>
         </div>
-
         <div class="question-group">
           <div class="question-title">13. ¿Cuál es el principal medio por el que recibe información política? </div>
           <div class="radio-group">
-          <label class="radio-option">
-            <input type="radio" name="medio_principal" value="Redes Sociales" id="optRedes">
-            Redes Sociales
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="medio_principal" value="Medios Comunicacionales" id="optComunicacion">
-            Medios Comunicacionales
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="medio_principal" value="Medios Digitales" id="optDigital">
-            Medios Digitales
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="medio_principal" value="Vinculos Sociales" id="optVinculos">
-            Vínculos Sociales
-          </label>
-        </div>
-
-        <!-- Subopciones dinámicas -->
-        <div id="redesSelect" class="hidden-field">
-          <div class="select-group">
-            <label for="medio_redes">Selecciona la red social:</label>
-            <select id="medio_redes" name="medio_redes">
-              <option value="">Seleccionar...</option>
-              <option value="TikTok">TikTok</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Instagram">Instagram</option>
-              <option value="Linkedin">Linkedin</option>
-              <option value="Telegram">Telegram</option>
-            </select>
+            <label class="radio-option">
+              <input type="radio" name="medio_principal" value="Redes Sociales" id="optRedes">
+              Redes Sociales
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="medio_principal" value="Medios Comunicacionales" id="optComunicacion">
+              Medios Comunicacionales
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="medio_principal" value="Medios Digitales" id="optDigital">
+              Medios Digitales
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="medio_principal" value="Vinculos Sociales" id="optVinculos">
+              Vínculos Sociales
+            </label>
           </div>
-        </div>
 
-        <div id="comunicacionSelect" class="hidden-field">
-          <div class="select-group">
-            <label for="medio_comunicacion">Selecciona el medio comunicacional:</label>
-            <select id="medio_comunicacion" name="medio_comunicacion">
-              <option value="">Seleccionar...</option>
-              <option value="Television">Televisión tradicional</option>
-              <option value="Radio">Radio tradicional</option>
-              <option value="Periodicos">Periódicos</option>
-              <option value="Revistas">Revistas</option>
-            </select>
+          <div id="redesSelect" class="hidden-field">
+            <div class="select-group">
+              <label for="medio_redes">Selecciona la red social:</label>
+              <select id="medio_redes" name="medio_redes">
+                <option value="">Seleccionar...</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Linkedin">Linkedin</option>
+                <option value="Telegram">Telegram</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <div id="digitalSelect" class="hidden-field">
-          <div class="select-group">
-            <label for="medio_digital">Selecciona el medio digital:</label>
-            <select id="medio_digital" name="medio_digital">
-              <option value="">Seleccionar...</option>
-              <option value="Prensa en linea">Prensa en línea</option>
-              <option value="Podcast">Podcast</option>
-              <option value="SitiosWeb">Sitios web</option>
-            </select>
+          <div id="comunicacionSelect" class="hidden-field">
+            <div class="select-group">
+              <label for="medio_comunicacion">Selecciona el medio comunicacional:</label>
+              <select id="medio_comunicacion" name="medio_comunicacion">
+                <option value="">Seleccionar...</option>
+                <option value="Television">Televisión tradicional</option>
+                <option value="Radio">Radio tradicional</option>
+                <option value="Periodicos">Periódicos</option>
+                <option value="Revistas">Revistas</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <div id="vinculosSelect" class="hidden-field">
-          <div class="select-group">
-            <label for="medio_vinculos">Selecciona el vínculo social:</label>
-            <select id="medio_vinculos" name="medio_vinculos">
-              <option value="">Seleccionar...</option>
-              <option value="Familiares">Familiares</option>
-              <option value="Amigos">Amigos</option>
-              <option value="Pareja">Pareja</option>
-              <option value="Trabajo">Trabajo</option>
-            </select>
+          <div id="digitalSelect" class="hidden-field">
+            <div class="select-group">
+              <label for="medio_digital">Selecciona el medio digital:</label>
+              <select id="medio_digital" name="medio_digital">
+                <option value="">Seleccionar...</option>
+                <option value="Prensa en linea">Prensa en línea</option>
+                <option value="Podcast">Podcast</option>
+                <option value="SitiosWeb">Sitios web</option>
+              </select>
+            </div>
           </div>
+
+          <div id="vinculosSelect" class="hidden-field">
+            <div class="select-group">
+              <label for="medio_vinculos">Selecciona el vínculo social:</label>
+              <select id="medio_vinculos" name="medio_vinculos">
+                <option value="">Seleccionar...</option>
+                <option value="Familiares">Familiares</option>
+                <option value="Amigos">Amigos</option>
+                <option value="Pareja">Pareja</option>
+                <option value="Trabajo">Trabajo</option>
+              </select>
+            </div>
+          </div>
+      </div>
+      <!-- 5. Nivel de Información y Comprensión Política-->
+      <div class="question-group">
+        <div class="question-title">14. ¿Qué tan informado/a se siente sobre las propuestas de los candidatos?</div>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="informado" value="nada">Nada</label>
+          <label class="radio-option"><input type="radio" name="informado" value="poco">Poco</label>
+          <label class="radio-option"><input type="radio" name="informado" value="regular">Regular</label>
+          <label class="radio-option"><input type="radio" name="informado" value="mucho">Mucho</label>
+          <label class="radio-option"><input type="radio" name="informado" value="total">Total</label>
         </div>
+      </div>
+      <div class="question-group">
+        <div class="question-title">15. ¿Ha leído o escuchado los planes de gobierno de algún candidato?</div>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="planes" value="si">Sí</label>
+          <label class="radio-option"><input type="radio" name="planes" value="no">No</label>
         </div>
-        <div class="submit-section">
-          <button type="submit" class="submit-btn">Enviar Encuesta</button>
+      </div>
+      <div class="question-group">
+        <div class="question-title">16. ¿Considera que entiende bien las diferencias entre los modelos de desarrollo propuestos?</div>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="entiende" value="si">Sí</label>
+          <label class="radio-option"><input type="radio" name="entiende" value="no">No</label>
+          <label class="radio-option"><input type="radio" name="entiende" value="noSeguro">No estoy seguro/a</label>
         </div>
+      </div>
+      <!-- 6. Evolución de Opinión Política-->
+      <div class="question-group">
+        <div class="question-title">17. ¿Ha cambiado su intención de voto en los últimos 3 meses?</div>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="intencion" value="si">Sí</label>
+          <label class="radio-option"><input type="radio" name="intencion" value="no">No</label>
+        </div>
+      </div>
+      <div class="question-group">
+        <div class="question-title">18. ¿Qué factor provocaría el cambio en su intención de voto?</div>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="factor_cambio" value="propuesta">Propuestas </label>
+          <label class="radio-option"><input type="radio" name="factor_cambio" value="escandalo">Escándalos </label>
+          <label class="radio-option"><input type="radio" name="factor_cambio" value="influencia">Influencia externa</label>
+          <label class="radio-option"><input type="radio" name="factor_cambio" value="debate">Debate </label>
+        </div>
+      </div>
+      <div class="question-group">
+        <div class="question-title">19. ¿Cree que podría cambiar su voto antes de las elecciones?</div>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="cambio" value="si">Sí</label>
+          <label class="radio-option"><input type="radio" name="cambio" value="no">No</label>
+          <label class="radio-option"><input type="radio" name="cambio" value="noSeguro">No estoy seguro/a</label>
+        </div>
+      </div>
+      <div class="submit-section">
+        <button type="submit" class="submit-btn">Enviar Encuesta</button>
+      </div>
 
       </form>
     </div>
